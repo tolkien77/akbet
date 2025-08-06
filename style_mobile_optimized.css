@@ -1,0 +1,210 @@
+
+/* Genel Ayarlar ve Fontlar */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+    color: #495057;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    background-color: #023475;
+    color: #ecf0f1;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    overflow-y: auto;
+}
+
+/* Anket Alanı */
+.poll-container {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+.poll-container h2 {
+    color: #2c3e50;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.options-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 15px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.option-button {
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 2px solid #ced4da;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #495057;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.option-button:hover {
+    background-color: #0fcfed;
+    border-color: #adb5bd;
+}
+
+.option-button.selected {
+    background-color: #023475;
+    color: #ffffff;
+    border-color: #2980b9;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.option-button.selected:hover {
+    background-color: #023475;
+}
+
+/* Anket Sonuçları ve Grafik Kapsayıcıları */
+#results-container {
+    margin-top: 15px;
+    text-align: center;
+}
+
+#results-container h3 {
+    color: #2c3e50;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+.chart-wrapper {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+}
+
+canvas {
+    max-width: 100%;
+    height: auto !important;
+    display: block;
+}
+
+.legend-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.legend-color-box {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    background-color: #023475;
+    color: #ecf0f1;
+    box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+    margin-top: auto;
+}
+
+/* Mobil cihazlar için özel stiller */
+@media (max-width: 768px) {
+    body {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    main {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .poll-container {
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    .poll-container h2 {
+        font-size: 1em;
+        margin-bottom: 5px;
+    }
+
+    .option-button {
+        padding: 8px;
+        font-size: 0.8em;
+    }
+
+    .option-button.selected {
+        transform: none;
+        box-shadow: none;
+    }
+
+    #results-container {
+        margin-top: 5px;
+    }
+
+    .chart-wrapper {
+        width: 150px;
+        height: 150px;
+    }
+
+    .legend-container {
+        gap: 5px;
+        margin-bottom: 5px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer {
+        font-size: 0.7em;
+    }
+}

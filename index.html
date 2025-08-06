@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Akbet'e Hoşgeldiniz</title>
+    <link rel="stylesheet" href="style_mobile_optimized.css">
+</head>
+<body>
+
+    <header>
+        <h1>Akbet'e Hoşgeldiniz</h1>
+    </header>
+
+    <main>
+        <section class="poll-container">
+            <h2 id="question-text">Akkuyu Nükleerde maaşlar ne zaman yatar?</h2>
+            <div class="options-container">
+                <button class="option-button">Bugün Yarın</button>
+                <button class="option-button">Bu Hafta</button>
+                <button class="option-button">Bu Ay</button>
+                <button class="option-button">Allah Büyük</button>
+            </div>
+            <div id="results-container">
+                <h3>Anket Sonuçları</h3>
+                <div class="legend-container"></div>
+                <div class="chart-wrapper">
+                    <canvas id="pollChart"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © 2025. Tamamen Mizah Amaçlı Yapılmıştır.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script_mobile_optimized.js"></script>
+
+</body>
+</html>
