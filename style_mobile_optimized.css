@@ -154,6 +154,7 @@ footer {
     box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
     flex-shrink: 0;
     margin-top: auto;
+margin-bottom: 220px;
 }
 
 /* Mobil cihazlar için özel stiller */
